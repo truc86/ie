@@ -89,7 +89,7 @@ export default function ProductPage() {
   return (
     <>
       {product && (
-        <div className="container mx-auto p-4 rounded-lg shadow-md">
+        <div className="container mx-auto p-4">
           <Link
             href="/products"
             className="inline-flex items-center gap-2 mb-4 px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-200 shadow-sm"

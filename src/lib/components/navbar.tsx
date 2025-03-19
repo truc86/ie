@@ -47,7 +47,7 @@ const Navbar = () => {
         </Link>
         <button
           onClick={() => setCartOpen(true)}
-          className="relative rounded-full bg-gray-200 dark:bg-gray-700 p-4 ml-4"
+          className="relative rounded-full bg-gray-200 dark:bg-gray-700 p-4 ml-4 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -188,24 +188,22 @@ const Navbar = () => {
             <>
               <div className="mb-4 max-h-[calc(100vh-200px)] overflow-y-auto">
                 {cart.map((item, index) => (
-                  <>
-                    <div
-                      key={index}
-                      className="mb-4 flex items-center justify-between"
-                    >
-                      <div>
-                        <p className="font-semibold dark:text-white">
-                          {item.name}
-                        </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-300">
-                          Qty: {item.quantity} &times; ${item.price}
-                        </p>
-                      </div>
-                      <p className="text-sm font-semibold dark:text-white">
-                        ${(item.quantity * item.price).toFixed(2)}
+                  <div
+                    key={index}
+                    className="mb-4 flex items-center justify-between"
+                  >
+                    <div>
+                      <p className="font-semibold dark:text-white">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-300">
+                        Qty: {item.quantity} &times; ${item.price}
                       </p>
                     </div>
-                  </>
+                    <p className="text-sm font-semibold dark:text-white">
+                      ${(item.quantity * item.price).toFixed(2)}
+                    </p>
+                  </div>
                 ))}
               </div>
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-auto">
